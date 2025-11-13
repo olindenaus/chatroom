@@ -1,5 +1,5 @@
 export interface Message {
   text: string;
-  author: string;
+  nickname: string;
   createdAt: number;
 }
