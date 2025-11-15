@@ -21,8 +21,8 @@ const ChatRoom: React.FC = () => {
     if (!nickname) return;
 
     const newMessage: Message = {
-      text,
-      nickname,
+      text: text,
+      nickname: nickname,
       createdAt: Date.now(),
     };
 

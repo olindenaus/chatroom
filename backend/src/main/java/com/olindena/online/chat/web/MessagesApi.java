@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.Instant;
@@ -22,11 +23,11 @@ public class MessagesApi {
     }
 
     @PostMapping("/messages")
-    public void saveMessage(Message message) {
+    public void saveMessage(@RequestBody Message message) {
         log.info("Received message: {}", message);
         messages.add(message);
     }
 
-    public record Message(String content, String author, Instant timestamp) {
+    public record Message(String text, String nickname, Instant createdAt) {
     }
 }
