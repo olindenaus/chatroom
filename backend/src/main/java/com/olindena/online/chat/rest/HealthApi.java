@@ -1,6 +1,5 @@
-package com.olindena.online.chat.web;
+package com.olindena.online.chat.rest;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
