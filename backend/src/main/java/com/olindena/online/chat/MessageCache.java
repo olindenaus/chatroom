@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class MessageRepository {
+public class MessageCache {
     private final List<MessageDto> messages = new ArrayList<>();
 
     public List<MessageDto> listAll() {
