@@ -19,64 +19,64 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>com.github.eirslett</groupId>
-                <artifactId>frontend-maven-plugin</artifactId>
-                <version>1.15.4</version>
+<!--            <plugin>-->
+<!--                <groupId>com.github.eirslett</groupId>-->
+<!--                <artifactId>frontend-maven-plugin</artifactId>-->
+<!--                <version>1.15.4</version>-->
 
-                <executions>
-                    <!-- Install Node + npm -->
-                    <execution>
-                        <id>install-node-and-npm</id>
-                        <goals><goal>install-node-and-npm</goal></goals>
-                        <configuration>
-                            <nodeVersion>v20.10.0</nodeVersion>
-                            <npmVersion>10.2.3</npmVersion>
-                        </configuration>
-                    </execution>
+<!--                <executions>-->
+<!--                    &lt;!&ndash; Install Node + npm &ndash;&gt;-->
+<!--                    <execution>-->
+<!--                        <id>install-node-and-npm</id>-->
+<!--                        <goals><goal>install-node-and-npm</goal></goals>-->
+<!--                        <configuration>-->
+<!--                            <nodeVersion>v20.10.0</nodeVersion>-->
+<!--                            <npmVersion>10.2.3</npmVersion>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
 
-                    <!-- Install dependencies -->
-                    <execution>
-                        <id>npm-install</id>
-                        <goals><goal>npm</goal></goals>
-                        <configuration>
-                            <arguments>install</arguments>
-                            <workingDirectory>../frontend</workingDirectory>
-                        </configuration>
-                    </execution>
+<!--                    &lt;!&ndash; Install dependencies &ndash;&gt;-->
+<!--                    <execution>-->
+<!--                        <id>npm-install</id>-->
+<!--                        <goals><goal>npm</goal></goals>-->
+<!--                        <configuration>-->
+<!--                            <arguments>install</arguments>-->
+<!--                            <workingDirectory>../frontend</workingDirectory>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
 
-                    <!-- Build frontend -->
-                    <execution>
-                        <id>npm-build</id>
-                        <goals><goal>npm</goal></goals>
-                        <phase>prepare-package</phase>
-                        <configuration>
-                            <arguments>run build</arguments>
-                            <workingDirectory>../frontend</workingDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.3.1</version>
-                <executions>
-                    <execution>
-                        <id>copy-frontend</id>
-                        <phase>prepare-package</phase>
-                        <goals><goal>copy-resources</goal></goals>
-                        <configuration>
-                            <outputDirectory>${project.build.outputDirectory}/static</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>../frontend/dist</directory> <!-- or build -->
-                                    <filtering>false</filtering>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+<!--                    &lt;!&ndash; Build frontend &ndash;&gt;-->
+<!--                    <execution>-->
+<!--                        <id>npm-build</id>-->
+<!--                        <goals><goal>npm</goal></goals>-->
+<!--                        <phase>prepare-package</phase>-->
+<!--                        <configuration>-->
+<!--                            <arguments>run build</arguments>-->
+<!--                            <workingDirectory>../frontend</workingDirectory>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <artifactId>maven-resources-plugin</artifactId>-->
+<!--                <version>3.3.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>copy-frontend</id>-->
+<!--                        <phase>prepare-package</phase>-->
+<!--                        <goals><goal>copy-resources</goal></goals>-->
+<!--                        <configuration>-->
+<!--                            <outputDirectory>${project.build.outputDirectory}/static</outputDirectory>-->
+<!--                            <resources>-->
+<!--                                <resource>-->
+<!--                                    <directory>../frontend/dist</directory> &lt;!&ndash; or build &ndash;&gt;-->
+<!--                                    <filtering>false</filtering>-->
+<!--                                </resource>-->
+<!--                            </resources>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 

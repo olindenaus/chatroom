@@ -14,10 +14,9 @@ public class ChatController {
     private final MessageCache messageCache;
     private final MessagesRepository messagesRepository;
 
-    public ChatController(MessageCache messageCache
-    , MessagesRepository messagesRepository) {
+    public ChatController(MessageCache messageCache, MessagesRepository messagesRepository) {
         this.messageCache = messageCache;
-        this.messagesRepository = null;
+        this.messagesRepository = messagesRepository;
     }
 
     @MessageMapping("/chat")

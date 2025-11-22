@@ -62,7 +62,6 @@ const ChatRoom: React.FC = () => {
        destination: "/app/chat",
        body: JSON.stringify(newMessage),
      });
-     setText("");
   };
 
   const handleNicknameSave = (nick: string) => {
